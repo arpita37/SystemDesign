@@ -1,5 +1,9 @@
+from model.topic_subscriber import TopicSubscriber
+from model.message import Message
+
+
 class Topic:
-    def __init__(self,topicName="", topicID=0) -> None:
+    def __init__(self,topicName : str="", topicID : int=0) -> None:
         self.topicName = topicName
         self.topicID = topicID
         self.messages = list() ## Message type
@@ -15,10 +19,10 @@ class Topic:
     def getSubscribers(self):
         return self.subscribers
     
-    def addMessage(self, messgae):
+    def addMessage(self, messgae:Message):
         self.messages.append(messgae)
 
-    def addSubscriber(self, subsriber):
+    def addSubscriber(self, subsriber: TopicSubscriber):
         self.subscribers.append(subsriber)
 
 

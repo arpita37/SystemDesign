@@ -1,10 +1,12 @@
 from collections import defaultdict
 from typing import Final
+from model.topic_subscriber import TopicSubscriber
+from model.topic import Topic
 from handler.subscriber_worker import SubscriberWorker
 import threading
 
 class TopicHandler:
-    def __init__(self, topic=None ):
+    def __init__(self, topic : Topic=None ):
         self.topic = topic
         self.subsWorkers = defaultdict(SubscriberWorker)
 
@@ -14,7 +16,7 @@ class TopicHandler:
             self.startSubWorkers(subscriber)
 
 
-    def startSubWorker(self, topicSubscriber):
+    def startSubWorker(self, topicSubscriber:TopicSubscriber):
         if topicSubscriber == None:
             raise IOError
         subId = topicSubscriber.getSubscriber().getId()

@@ -4,7 +4,7 @@ from public_interface.isubscriber import ISubscriber
 import threading
 
 class SleepingSubscriber(ISubscriber):
-    def __init__(self, id, sleepTimeInMillis):
+    def __init__(self, id: int, sleepTimeInMillis: int):
         super().__init__()
         self.id= id
         self.sleepTimeInMillis = sleepTimeInMillis

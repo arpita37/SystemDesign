@@ -24,6 +24,6 @@ class TopicSubscriber:
     def getSubscriber(self):
         return self.subscriber
     
-    def setOffset(self, val):
+    def setOffset(self, val:int):
         if self.offset == val-1:
             self.offset = val
