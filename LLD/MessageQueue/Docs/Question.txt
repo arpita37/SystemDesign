@@ -8,6 +8,9 @@ Subscribers should be able to run in parallel
 
 
 Pending:
-1. Implement asynchronous methods
-2. Implement inteface is better way
+1. Implement asynchronous methods (DONE)
+2. Implement inteface is better way (DONE)
 3. Assign variable type in each methods
+
+Sample - 
+https://github.com/anomaly2104/low-level-design-messaging-queue-pub-sub/blob/d5afa431acabb4f779af6f0aafbae74118bffb87/src/main/java/com/uditagarwal/pub_sub_queue/public_interface/ISubscriber.java
