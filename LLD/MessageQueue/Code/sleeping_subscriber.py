@@ -1,12 +1,12 @@
 from typing import Final
-from model import Message
-from public_interface import ISubscriber
+from model.message import Message
+from public_interface.isubscriber import ISubscriber
 import threading
 
 class SleepingSubscriber(ISubscriber):
-
     def __init__(self, id, sleepTimeInMillis):
-        self.id : Final= id
+        super().__init__()
+        self.id= id
         self.sleepTimeInMillis = sleepTimeInMillis
         assert id is not None
 

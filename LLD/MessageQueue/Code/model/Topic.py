@@ -5,13 +5,10 @@ class Topic:
         self.messages = list() ## Message type
         self.subscribers = list() ##TopicSubscriber type
 
-    @property
     def getTopicId(self):
         return self.topicID
-    @property
     def getTopicName(self):
         return self.topicName
-    @property
     def getMessages(self):
         return self.messages
     

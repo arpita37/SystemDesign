@@ -1,7 +1,8 @@
-from model import Topic, TopicSubscriber
+from model.topic_subscriber import TopicSubscriber
+from model.topic import Topic
 import threading
 
-class subscriberWorker:
+class SubscriberWorker:
     def __init__(self,topic:Topic, topicSubscriber : TopicSubscriber):
         self.topic = topic
         self.topicSubscriber = topicSubscriber

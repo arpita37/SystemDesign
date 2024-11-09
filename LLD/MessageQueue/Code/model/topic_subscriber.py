@@ -1,6 +1,6 @@
 from typing import Final
-from model import AtomicInteger
-from public_interface import ISubscriber
+from model.atomic_integer import AtomicInteger
+from public_interface.isubscriber import ISubscriber
 from threading import RLock
 
 class TopicSubscriber:
