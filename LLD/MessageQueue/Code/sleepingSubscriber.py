@@ -1,6 +1,6 @@
 from typing import Final
-from SystemDesign.LLD.MessageQueue.Code.model.Message import Message
-from SystemDesign.LLD.MessageQueue.Code.public_interface import ISubscriber
+from model import Message
+from public_interface import ISubscriber
 import threading
 
 class SleepingSubscriber(ISubscriber):

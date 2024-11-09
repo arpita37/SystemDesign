@@ -1,6 +1,6 @@
 from collections import defaultdict
 from typing import Final
-from SystemDesign.LLD.MessageQueue.Code.handler import subscriberWorker
+from handler import subscriberWorker
 import threading
 
 class TopicHandler:

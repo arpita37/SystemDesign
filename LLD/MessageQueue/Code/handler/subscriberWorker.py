@@ -1,4 +1,4 @@
-from SystemDesign.LLD.MessageQueue.Code.model import Topic, TopicSubscriber
+from model import Topic, TopicSubscriber
 import threading
 
 class subscriberWorker:

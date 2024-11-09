@@ -1,10 +1,8 @@
 from collections import defaultdict
 from typing import Final
-from SystemDesign.LLD.MessageQueue.Code.handler import TopicHandler
-from SystemDesign.LLD.MessageQueue.Code.model import Topic
-from SystemDesign.LLD.MessageQueue.Code.model import TopicSubscriber
-from SystemDesign.LLD.MessageQueue.Code.model.Message import Message
-from SystemDesign.LLD.MessageQueue.Code.public_interface import ISubscriber
+from handler import TopicHandler
+from model import Topic, TopicSubscriber, Message
+from public_interface import ISubscriber
 import random
 import concurrent.futures
 import threading

@@ -1,4 +1,4 @@
-from SystemDesign.LLD.MessageQueue.Code.model.Message import Message
+from model import Message
 class ISubscriber: ## This is an interface
     def __init__(self):
         pass

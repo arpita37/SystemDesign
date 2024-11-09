@@ -1,6 +1,6 @@
 from typing import Final
-from SystemDesign.LLD.MessageQueue.Code.model import AtomicInteger
-from SystemDesign.LLD.MessageQueue.Code.public_interface import ISubscriber
+from model import AtomicInteger
+from public_interface import ISubscriber
 from threading import RLock
 
 class TopicSubscriber:
