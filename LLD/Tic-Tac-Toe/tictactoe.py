@@ -3,7 +3,7 @@ from playing_piece_X import PlayingPieceX
 from playing_piece_O import PlayingPieceO
 from playing_piece_Y import PlayingPieceY
 from player import Player
-from board import Board 
+from board import Board
 
 class TicTacToe:
     def __init__(self, no_of_players : int, boardSize:int) -> None:
@@ -17,12 +17,14 @@ class TicTacToe:
     def initializeGame(self):
         xPiece = PlayingPieceX()
         oPiece = PlayingPieceO()
+        yPiece = PlayingPieceY()
         player1 = Player("Player1", xPiece)
         player2 = Player("Player2", oPiece)
+        player3 = Player("Player3", yPiece )
         self.players.append(player1)
         self.players.append(player2)
         if self.no_of_players > 2:
-            self.players.append(Player("Player3", PlayingPieceY ))
+            self.players.append(player3)
         self.gameBoard = Board(self.boardSize)
         print(f"Game initialization is done!")
 
