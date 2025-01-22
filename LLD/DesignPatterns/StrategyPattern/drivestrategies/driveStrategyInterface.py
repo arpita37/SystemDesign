@@ -2,12 +2,12 @@ import abc
 
 
 class DriveStrategy(metaclass=abc.ABCMeta):
-    classmethod
+    @classmethod
     def __subclasshook__(cls, __subclass):
         return(hasattr(__subclass,'Drive') and
                callable(__subclass.Drive))
 
     @abc.abstractmethod
-    def Drive(self):
+    def drive(self):
         raise NotImplementedError
 

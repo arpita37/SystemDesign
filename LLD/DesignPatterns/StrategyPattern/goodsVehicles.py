@@ -7,4 +7,4 @@ class GoodsVehicle(Vehicle):
         super().__init__(NormalDriveStrategy())
 
     def Drive(self):
-        super().Drive()
+        super().drive()

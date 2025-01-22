@@ -7,4 +7,4 @@ class OffRoadVehicle(Vehicle):
         super().__init__(SpecialDriveStrategy())
 
     def Drive(self):
-        super().Drive()
+        super().drive()

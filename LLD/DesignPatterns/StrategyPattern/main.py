@@ -4,10 +4,10 @@ from DesignPatterns.StrategyPattern.sportsVehicles import SportsVehicle
 
 def main():
     goodsObj = GoodsVehicle()
-    goodsObj.Drive()
+    goodsObj.drive()
 
     sportsObj = SportsVehicle()
-    sportsObj.Drive()
+    sportsObj.drive()
 
 
 if __name__ == "__main__":

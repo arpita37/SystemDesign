@@ -5,5 +5,5 @@ class SpecialDriveStrategy(DriveStrategy):
     def __init__(self):
         super().__init__()
 
-    def Drive(self):
+    def drive(self):
         print(f'This is for special drive Strategy')

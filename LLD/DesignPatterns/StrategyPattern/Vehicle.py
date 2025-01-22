@@ -5,5 +5,5 @@ class Vehicle:
     def __init__(self, driveObj : DriveStrategy) -> None:
         self.driverObject = driveObj
 
-    def Drive(self):
-        self.driverObject.Drive()
+    def drive(self):
+        self.driverObject.drive()
