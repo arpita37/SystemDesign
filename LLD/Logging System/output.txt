@@ -1,0 +1,7 @@
+[INFO] 2025-01-30 06-12-11 : This is an info for text file[WARNING] 2025-01-30 06-12-11 : This is an info for text file[DEBUG] 2025-01-30 06-12-11 : This is an info for text file
+[INFO] 2025-01-30 06-12-27 : This is an info for text file
+[WARNING] 2025-01-30 06-12-27 : This is an info for text file
+[DEBUG] 2025-01-30 06-12-27 : This is an info for text file
+[INFO] 2025-01-30 06-12-42 : This is an info for text file
+[WARNING] 2025-01-30 06-12-42 : This is an info for text file
+[DEBUG] 2025-01-30 06-12-42 : This is an info for text file
