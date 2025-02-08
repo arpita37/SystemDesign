@@ -8,7 +8,7 @@ class Demo:
     @staticmethod
     def run():
         obj = GameEngine()
-        p1 = [Player("Arpita"),Player("Kingshuk"),Player("Alina")]
+        p1 = [Player("Arpita"),Player("Kingshuk"),Player("Adi")]
         obj.startNewGame(p1)
         time.sleep(10)
         p2 = [Player("Rajib"), Player("Patramita")]
