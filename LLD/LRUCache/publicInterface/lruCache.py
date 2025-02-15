@@ -27,30 +27,38 @@ class LRUCache:
         self.maxCapacity = num
 
     def putKey(self,key,v):
-        with self.lock:
-            if key in self.hashmap:
-                self.hashmap[key][1] = v
-                self.getKey(key)
-                self.log.info(f"Value {key} added successfully!!!")
-                return
-            if self.capacity == self.maxCapacity:
-                node = self.head
-                node.next.prev = None
-                self.head = self.head.next
-                node.next = None
-                val = node.val
-                self.hashmap.pop(val)
-
-            if not self.head:
-                self.head = ListNode(key)
-                self.tail = self.head
-            else:
-                node = ListNode(key)
-                self.tail.next = node
-                node.prev = self.tail
-                self.tail = node
-            self.hashmap[key] = [self.tail,v]
+        self.lock.acquire()
+        flag = False
+        if key in self.hashmap:
+            self.hashmap[key][1] = v
+            self.lock.release()
+            self.getKey(key)
             self.log.info(f"Value {key} added successfully!!!")
+            return
+        if self.capacity == self.maxCapacity:
+            flag = True
+            node = self.head
+            node.next.prev = None
+            self.head = self.head.next
+            node.next = None
+            val = node.val
+            self.hashmap.pop(val)
+            self.capacity -= 1
+
+        if not self.head:
+            self.head = ListNode(key)
+            self.tail = self.head
+        else:
+            node = ListNode(key)
+            self.tail.next = node
+            node.prev = self.tail
+            self.tail = node
+        self.hashmap[key] = [self.tail,v]
+        self.log.info(f"Value {key} added successfully!!!")
+        if flag:
+            self._printCache()
+        self.capacity += 1
+        self.lock.release()
 
     def getKey(self,val):
         self.lock.acquire()
