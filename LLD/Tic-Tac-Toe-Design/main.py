@@ -1,16 +1,20 @@
 from Models.player import Player
-from PublicInterfaces.tictactoe import TicTacToeGame
-from Utils.playerPieceO import PlayerPieceO
-from Utils.playerPieceX import PlayerPieceX
+from Models.playerPieceX import PlayerPieceX
+from Models.playerPieceY import PlayerPieceY
+from PublicInterfaces.gameController import GameController
+from Utils.board import Board
 
 
-def main():
-    print("How many dimentional game do you want?")
-    n = int(input())
-    player1 = Player("Arpita",PlayerPieceX())
-    player2 = Player("kingshuk",PlayerPieceO())
-    gameObj = TicTacToeGame(n,player1, player2)
-    gameObj.startGame()
+class Demo:
+    @staticmethod
+    def run():
+        ctrler = GameController()
+        board = Board(3)
+        pieceX = PlayerPieceX()
+        pieceY = PlayerPieceY()
+        p1 = Player(1,"Arpita",pieceX)
+        p2 = Player(2,"Kingshuk", pieceY)
+        ctrler.newGame(board,[p1,p2])
 
 if __name__ == "__main__":
-    main()
+    Demo.run()

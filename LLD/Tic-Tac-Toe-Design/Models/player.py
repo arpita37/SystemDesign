@@ -1,12 +1,9 @@
-from Utils.playerPieceInterface import PlayerPiece
-
 class Player:
-    def __init__(self, name, piece: PlayerPiece):
+    def __init__(self, id, name, playerPiece):
+        self.id = id
         self.name = name
-        self.piece = piece
+        self.piece = playerPiece
 
-    def getName(self):
-        return self.name
-
-    def getPiece(self):
-        return self.piece.getPiece()
+    def getId(self): return self.id
+    def getName(self): return self.name
+    def getPiece(self): return self.piece
